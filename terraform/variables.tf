@@ -1,9 +1,5 @@
 variable "lambda_name" {
-    default = "process-image"
-}
-
-variable "lambda_app_version" {
-    default = "0.0.1-SNAPSHOT"
+    default = "face-recognition"
 }
 
 variable "lambda_description" {
@@ -11,19 +7,15 @@ variable "lambda_description" {
 }
 
 variable "lambda_runtime" {
-    default = "java21"
-}
-
-variable "lambda_function_path" {
-    default = "src/main/java/com/example/processimage/Handler.java"
+    default = "python3.13"
 }
 
 variable "lambda_handler" {
-    default = "com.example.processimage.Handler::handleRequest"
+    default = "handler.lambda_handler"
 }
 
 variable "lambda_timeout" {
-    default = 30
+    default = 15
 }
 
 variable "bucket_name" {
